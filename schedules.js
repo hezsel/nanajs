@@ -6,7 +6,7 @@ const morningMessage = new CronJob(
   () => messenger('good_morning'),
   () => console.log('stoped'),
   false,
-  'America/Sao_Paulo',
+  process.env.TIME_ZONE,
 )
 
 morningMessage.start()
