@@ -39,8 +39,7 @@ const bodyBuilder = ({ text, img_url }) => cond([
 const sendMessage = async (message) => {
   const body = bodyBuilder(message)
 
-  console.log(body)
-  // await webhook.send(body)
+  await webhook.send(body)
 }
 
 const getRandomPositionOfList = (list) => Math.floor(Math.random() * length(list))
